@@ -1,0 +1,11 @@
+gui:
+  nerdFontsVersion: "3"
+git:
+  disableForcePushing: true
+  parseEmoji: true
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
+os:
+  Open: 'nvim {{filename}}'
+  OS.Edit,EditAtLine: '{{editor}} +{{line}} -- {{filename}}'

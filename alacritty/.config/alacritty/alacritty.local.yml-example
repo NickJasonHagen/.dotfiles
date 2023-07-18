@@ -1,0 +1,11 @@
+font:
+  normal:
+    family: FiraCode Nerd Font
+    # Mac-only
+    style: Retina
+  size: 11.5
+
+# Mac-only
+window:
+  decorations: Buttonless
+
