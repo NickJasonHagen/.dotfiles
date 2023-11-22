@@ -7,7 +7,7 @@ mkdir -p ~/.vim/tmp/swap
 
 sudo apt install -y fd-find
 sudo apt install -y ansible
-sudo apt install -y xdotool
+sudo apt install -y xdotool # Used for keyboard shortcuts in Ubuntu, e.g.: xdotool search --onlyvisible --class "brave-browser" windowactivate
 
 brew install tmux
 brew install ripgrep
