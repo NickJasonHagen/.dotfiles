@@ -91,8 +91,8 @@ require('lazy').setup({
             },
 
             -- OTHERS
-            -- Useful status updates for LSP
-            'j-hui/fidget.nvim',
+                  -- Useful status updates for LSP
+            { 'j-hui/fidget.nvim', tag = "legacy", event = "LspAttach" },
 
             -- Additional lua configuration, makes nvim stuff amazing
             'folke/neodev.nvim',
@@ -261,13 +261,13 @@ require('lazy').setup({
             require('nickjasonhagen.toggleterm')
         end,
     },
-    {
-        'tami5/lspsaga.nvim',
-        cmd = 'Lspsaga',
-        config = function()
-            require('nickjasonhagen.lspsaga')
-        end,
-    },
+--    {
+--        'tami5/lspsaga.nvim',
+--        cmd = 'Lspsaga',
+--        config = function()
+--            require('nickjasonhagen.lspsaga')
+--        end,
+--    },
     {
         "folke/zen-mode.nvim",
         cmd = 'ZenMode',
@@ -414,6 +414,20 @@ require('lazy').setup({
               -- optionally override defaults
               -- default_replace_single_buffer_options = "gcI",
               -- default_replace_multi_buffer_options = "egcI",
+            })
+        end,
+    },
+        -- Highlight all words under cursor
+    {
+        "RRethy/vim-illuminate",
+        config = function()
+            require("illuminate").configure({
+                -- providers: provider used to get references in the buffer, ordered by priority
+                providers = {
+                    'lsp',
+                    'treesitter',
+                    'regex',
+                },
             })
         end,
     },
